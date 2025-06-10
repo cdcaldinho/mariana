@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IncluirTech - Cursos Online Acessíveis</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        nav a,
+        nav button {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        nav a:hover,
+        nav button:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Estilos de acessibilidade */
+        .high-contrast {
+            background-color: black;
+            color: yellow;
+        }
+
+        .high-contrast header {
+            background-color: #333;
+        }
+
+        .high-contrast section {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .high-contrast section h2 {
+            color: yellow;
+            border-bottom-color: yellow;
+        }
+
+        /* .larger-font {
+            font-size: 1.2em;
+        } */ /* Removed the fixed font size */
+
+        /* Estilos para a lista de cursos */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .course-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .course-card h3 {
+            margin: 0.5rem;
+            font-size: 1.1rem;
+            color: #007bff;
+        }
+
+        .course-card p {
+            margin: 0.5rem;
+            font-size: 0.9rem;
+            flex-grow: 1;
+        }
+
+        .course-card a {
+            display: block;
+            padding: 0.75rem;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-top: 1px solid #0056b3;
+        }
+
+        .course-card a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <h1>IncluirTech</h1>
+        <nav>
+            <ul>
+                <li><a href="#courses">Cursos</a></li>
+                <li>
+                    <button id="increase-font" aria-label="Aumentar fonte">A+</button>
+                    <button id="decrease-font" aria-label="Diminuir fonte">A-</button>
+                    <button id="toggle-contrast" aria-label="Ativar/Desativar alto contraste">Alto Contraste</button>
+                    <button id="read-content" aria-label="Ler conteúdo da página">🔊 Ler Conteúdo</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main id="main-content">
+        <section id="courses" aria-label="Lista de Cursos">
+            <h2>Cursos Disponíveis</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="https://cursoseducaweb.com.br/images/blog/informatica-basica-1.JPG"
+                        alt="Imagem do curso de Informática Básica">
+                    <h3>Informática Básica</h3>
+                    <p>Aprenda os fundamentos da informática para o dia a dia. Este curso é perfeito para quem está
+                        começando e quer dominar o computador.</p>  
+                    <a href="#">Saiba Mais</a>
+                </div>
+                <div class="course-card">
+                    <img src="https://mwpt.com.br/wp-content/uploads/2024/05/programacao-acessivel-edited.jpg"
+                        alt="Imagem do curso de Programação Web Acessível">
+                    <h3>Programação Web Acessível</h3>
+                    <p>Crie sites acessíveis para todos os usuários. Domine HTML, CSS e JavaScript com foco em
+                        acessibilidade.</p>
+                    <a href="#">Saiba Mais</a>
+                </div>
+                <div class="course-card">
+                    <img src=https://blog.belasartes.br/wp-content/uploads/2024/11/Belas-Artes-designer-grafico.jpg"
+                        alt="Imagem do curso de Design Gráfico Inclusivo">
+                    <h3>Design Gráfico Inclusivo</h3>
+                    <p>Desenvolva habilidades de design para um público diverso. Aprenda a criar designs que atendam às
+                        necessidades de todos.</p>
+                    <a href="#">Saiba Mais</a>
+                </div>
+                <div class="course-card">
+                    <img src="https://www.hubspot.com/hubfs/media/estudarmarketingdigital-1.jpeg"
+                        alt="Imagem do curso de Marketing Digital para Todos">
+                    <h3>Marketing Digital para Todos</h3>
+                    <p>Estratégias de marketing digital para alcançar todos os públicos. Aprenda a promover seus produtos
+                        e serviços de forma inclusiva.</p>
+                    <a href="#">Saiba Mais</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" aria-label="Sobre a IncluirTech">
+            <h2>Sobre a IncluirTech</h2>
+            <p>
+                A IncluirTech é uma plataforma dedicada a oferecer cursos online acessíveis para todos.
+                Nosso objetivo é promover a inclusão digital através de educação de qualidade e adaptada
+                às necessidades de cada aluno.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 IncluirTech | Educação Acessível</p>
+    </footer>
+
+    <!-- VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const increaseFontButton = document.getElementById('increase-font');
+            const decreaseFontButton = document.getElementById('decrease-font');
+            const toggleContrastButton = document.getElementById('toggle-contrast');
+            const readContentButton = document.getElementById('read-content');
+            const mainContent = document.getElementById('main-content');
+            const body = document.body;
+
+            let currentFontSize = 16; // Base font size in pixels
+            const fontSizeStep = 2; // Amount to increase/decrease font size with each click
+            const maxFontSize = 24; // Maximum font size
+            const minFontSize = 12; // Minimum font size
+
+            increaseFontButton.addEventListener('click', function () {
+                currentFontSize += fontSizeStep;
+                if (currentFontSize > maxFontSize) {
+                    currentFontSize = maxFontSize; // Cap at max size
+                }
+                body.style.fontSize = `${currentFontSize}px`;
+            });
+
+            decreaseFontButton.addEventListener('click', function () {
+                currentFontSize -= fontSizeStep;
+                if (currentFontSize < minFontSize) {
+                    currentFontSize = minFontSize; // Cap at min size
+                }
+                body.style.fontSize = `${currentFontSize}px`;
+            });
+
+            toggleContrastButton.addEventListener('click', function () {
+                document.body.classList.toggle('high-contrast');
+            });
+
+            readContentButton.addEventListener('click', function () {
+                const text = mainContent.innerText;
+                const utterance = new SpeechSynthesisUtterance(text);
+                speechSynthesis.speak(utterance);
+            });
+        });
+    </script>
+</body>
+
+</html>
